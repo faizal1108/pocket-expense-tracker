@@ -1,0 +1,254 @@
+:root {
+  --base-clr: #11121a;
+  --line-clr: #42434a;
+  --hover-clr: #222533;
+  --text-clr: #e6e6ef;
+  --accent-clr: #5e63ff;
+  --secondary-text-clr: #b0b3c1;
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background: var(--base-clr);
+  color: var(--text-clr);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+/* ==== Card Wrapper for Form + Calculator ==== */
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+/* Card Base Style */
+.card {
+  background: var(--hover-clr);
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+/* Form and calculator individual widths */
+.form-card {
+  flex: 2;
+}
+
+.calculator-card {
+  flex: 1;
+  background-color: #f9f9f9;
+  color: #000;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  padding: 20px;
+}
+
+/* Card Title */
+.card-title {
+  font-size: 18px;
+  margin-bottom: 16px;
+  color: var(--secondary-text-clr);
+  border-bottom: 1px solid var(--line-clr);
+  padding-bottom: 10px;
+}
+
+/* Form Styling */
+.savings-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+input,
+select,
+textarea {
+  padding: 0.6rem;
+  font-size: 14px;
+  border-radius: 6px;
+  background: var(--base-clr);
+  color: var(--text-clr);
+  border: 1px solid var(--line-clr);
+}
+
+textarea {
+  resize: vertical;
+}
+
+.btn-save {
+  background-color: var(--accent-clr);
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  width: fit-content;
+}
+
+.btn-save:hover {
+  background-color: #464bff;
+}
+
+/* Table Section */
+.table-card {
+  margin-top: 30px;
+}
+
+.savings-table {
+  width: 100%;
+  table-layout: auto;
+}
+
+.savings-table thead {
+  background-color: var(--line-clr);
+}
+
+.savings-table th,
+.savings-table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid var(--hover-clr);
+}
+
+.savings-table th {
+  color: var(--secondary-text-clr);
+}
+
+.savings-table td {
+  color: var(--text-clr);
+}
+
+.edit-btn,
+.delete-btn {
+  padding: 5px 10px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-size: 12px;
+  margin-right: 5px;
+}
+
+.edit-btn {
+  background-color: #3b82f6;
+  color: white;
+}
+
+.delete-btn {
+  background-color: #ef4444;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #2563eb;
+}
+
+.delete-btn:hover {
+  background-color: #dc2626;
+}
+
+/* Filter Bar */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.search-input {
+  padding: 0.5rem;
+  width: 280px;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 1px solid var(--line-clr);
+  background: var(--base-clr);
+  color: var(--text-clr);
+}
+
+.date-filters {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.date-filters label {
+  font-size: 0.9rem;
+}
+
+.date-filters input {
+  padding: 0.4rem;
+  font-size: 0.9rem;
+  border-radius: 4px;
+  border: 1px solid var(--line-clr);
+  background: var(--base-clr);
+  color: var(--text-clr);
+}
+
+.no-data {
+  text-align: center;
+  padding: 1rem;
+  color: var(--secondary-text-clr);
+}
+
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.form-card {
+  flex: 2;
+}
+
+.calculator-card {
+  flex: 1;
+  background: #f9f9f9;
+  color: #000;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid #ddd;
+  min-width: 280px;
+}
+
+.calculator-card h3 {
+  margin-bottom: 12px;
+  font-size: 18px;
+}
+
+.calculator-card .form-row {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.calculator-card input {
+  padding: 0.6rem;
+  font-size: 14px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #000;
+}
+
+.calc-result {
+  margin-top: 15px;
+  font-weight: bold;
+  font-size: 16px;
+}

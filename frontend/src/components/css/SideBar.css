@@ -1,0 +1,117 @@
+#sidebar {
+  width: var(--sidebar-width, 210px);
+  background: var(--sidebar-bg, #18181b);
+  color: var(--sidebar-text, #fff);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: var(--sidebar-shadow, 0 4px 24px #0008);
+  border-radius: 0;
+  padding: 32px 0 24px 0;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+  z-index: 1;
+}
+
+#sidebar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0 0;
+  width: 100%;
+}
+
+#sidebar li {
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+#sidebar .Icon {
+  width: 68px;
+  height: 68px;
+  border-radius: 50%;
+  margin: 0 auto 8px auto;
+  display: block;
+  object-fit: cover;
+  background: #23232b;
+  box-shadow: 0 2px 10px #5e63ff33;
+}
+
+.sidebar-username {
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+  font-size: 1.08rem;
+  color: var(--sidebar-accent, #5e63ff);
+  margin-bottom: 24px;
+  letter-spacing: 0.01em;
+  display: block;
+}
+
+#sidebar a,
+#sidebar .dropdown-btn {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  font-size: 1.09rem;
+  font-weight: 500;
+  color: var(--sidebar-inactive, #b0b3c1);
+  text-decoration: none;
+  border-radius: 8px;
+  padding: 10px 18px;
+  margin: 0;
+  background: none;
+  border: none;
+  transition: background 0.17s, color 0.17s;
+  cursor: pointer;
+  width: 100%;
+  text-align: left;
+}
+
+#sidebar a.active,
+#sidebar a:focus,
+#sidebar a:hover,
+#sidebar .dropdown-btn:focus,
+#sidebar .dropdown-btn:hover {
+  background: none;
+  color: var(--sidebar-accent, #5e63ff);
+}
+
+#sidebar .dropdown-btn img:last-child {
+  margin-left: auto;
+  transition: transform 0.2s;
+}
+#sidebar .dropdown-btn[aria-expanded="true"] img:last-child,
+.arrow-open {
+  transform: rotate(180deg);
+}
+
+/* Submenu as li, not as a separate class */
+#sidebar li .submenu-link, /* Add this class to submenu links if you want */
+#sidebar li > a.submenu-link {
+  padding-left: 38px;
+  font-size: 1.01rem;
+  color: var(--sidebar-accent, #5e63ff);
+  background: none;
+}
+
+#sidebar li .submenu-link.active,
+#sidebar li .submenu-link:focus,
+#sidebar li .submenu-link:hover {
+  color: var(--sidebar-accent, #5e63ff);
+  text-decoration: underline;
+}
+@media (max-width: 700px) {
+  #sidebar {
+    display: none !important;
+    /* Or: position: static; width: 0; min-width: 0; max-width: 0; overflow: hidden; */
+  }
+  .sub-menu,
+  .submenu-link,
+  .dropdown-btn {
+    display: none !important;
+  }
+}
